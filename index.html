@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>test2</title>
+  </head>
+  <body>
+    <header>
+      <h1><em>My Book List</em></h1>
+    </header>
+
+    <section id="books">
+      <div>Book 1 - The Fault in Our Stars</div>
+      <br />
+      <div>Book 2 - It Ends with Us</div>
+      <br />
+      <div>Book 3- The 12 Week Year</div>
+    </section>
+    <br />
+
+    <div class="container">
+      <ul>
+        <li>
+          <div class="card">
+            <div class="title">The Fault in Our Stars</div>
+            <br />
+            <div class="author">John Green</div>
+            <p>A story of hope and life's meaning.</p>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="title">It Ends with Us</div>
+            <br />
+            <div class="author">Colleen Hoover</div>
+            <p>Follows a perfect romancw turned into domestic abuse.</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="card">
+            <div class="title">The 12 Week Year</div>
+            <br />
+            <div class="author">Brian P. Moran</div>
+            <p>
+              A guide on time management system in order to achieve your goals.
+            </p>
+          </div>
+        </li>
+
+        <h4></h4>
+      </ul>
+    </div>
+
+    <button>Add Book</button>
+
+    <script>
+      function addList(event) {
+        let h4 = document.querySelector("h4");
+        let title = prompt("What is the book title?");
+        let author = prompt("Who is the author?");
+        let description = prompt("What is the book about?");
+        h4.innerHTML = `${title} ${author} ${description}`;
+      }
+      let addButton = document.querySelector("button");
+
+      addButton.addEventListener("click", addList);
+    </script>
+  </body>
+</html>
